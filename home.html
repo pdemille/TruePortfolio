@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!--https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_portfolio3&stacked=h-->
+<html>
+<title>Paris DeMille Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Raleway", sans-serif
+    }
+
+    .w3-quarter img {
+        margin-bottom: -6px;
+        cursor: pointer
+    }
+
+    .w3-quarter img:hover {
+        opacity: 0.6;
+        transition: 0.3s
+    }
+</style>
+
+<body class="w3-light-grey">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;"
+        id="mySidebar">
+        <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"> FULL STACK PORTFOLIO</a>
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"> FINANCIAL PORTFOLIO</a>
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"> DESIGN PORTFOLIO</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a>
+    </nav>
+
+    <img src="mountains.jpg"
+                    style="width:100%"  alt="Paris DeMille's Portfolio" title="Portfolio">
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Paris DeMille's Portfolio</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+
+        <!-- Photo grid -->
+        <div class="w3-row w3-grayscale-min">
+            <div class="w3-quarter">                    
+                <img src="http://harrykingriches.info/wp-content/uploads/2017/10/plant-wallpaper-wallpaper-leaves-green-plant-blur-robert-plant-wallpaper-hd.jpg"
+                    style="width:100%" height="177" onclick="window.open('https://immense-plateau-41753.herokuapp.com/', '_blank');"  alt="" title="Plantsy">       
+                    <h3>Plantsy</h3>
+                <p>A new way for plant nurseries to share product info directly to a consumer, and to make a profit while doing
+                    so!</p>
+
+                <img src="https://i.pinimg.com/originals/cb/b4/b4/cbb4b4f558d0212634a635a24fba4801.jpg" style="width:100%" height="177"
+                onclick="window.open('https://nameless-stream-63268.herokuapp.com/', '_blank');" alt="" title="SpoTube">
+                <h3>SpoTube</h3>
+                <p>Reimagining what your personal Spotify playlist is with official music videos for each track!</p>
+                
+                <img src="https://static1.squarespace.com/static/595d69672e69cf27605f00ba/t/59810c9f46c3c4c73ce5825e/1501629628499/retail_and_fashion.jpg"
+                    style="width:100%" height="177" onclick="window.open('https://wornock.com/', '_blank');" alt="The Beach. Me. Alone. Beautiful" title="Wornöck">
+                <h3>Wornöck</h3>
+                <p>An ecommerce site that directly works with wholesalers to provide optimal priced women's beach wear!</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img class="animated-gif" src="https://media.giphy.com/media/3o6vXTpomeZEyxufGU/giphy.gif"
+                style="width:100%" height="177" onclick="window.open('https://pdemille.github.io/Giphy-API/', '_blank');" alt="Canoeing again" title="Giphy App">
+            <h3>Giphy App</h3>
+            <p>Continuously add as many Giphys as you can imagine and watch your list of buttons grow! Yes, it is based on 80s movies.</p>
+            
+            <img src="data:image/jpeg;base64,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" style="width:100%" 
+            height="177" onclick="window.open('https://pdemille.github.io/TriviaGame/', '_blank');" alt="Quiet day at the beach. Cold, but beautiful" title="Trivia Game">
+            <h3>Trivia Game</h3>
+            <p>A cryptocurrency trivia game that asks questions and tells you how many you got right after!</p>
+            
+            <img src="data:image/png;base64,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"
+                style="width:100%" height="177" onclick="window.open('https://github.com/pdemille/bamazon', '_blank');" alt="The Beach. Me. Alone. Beautiful" title="Bamazon">
+            <h3>Bamazon</h3>
+            <p>Use this app to buy products from a database, delete them, find them based on prices, or add them.</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="https://az616578.vo.msecnd.net/files/2016/12/13/636171917931510928596159522_ughh.jpg"
+                    style="width:100%" height="177" onclick="window.open('https://desolate-earth-33302.herokuapp.com/', '_blank');" alt="Canoeing again" title="Eat The Burger">
+                <h3>Eat the Burger</h3>
+                <p>Every time you pick a burger, let's store it in a database and see all the burgers you've ever eaten. Totally practical.
+                    so!</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCqz29OZEPv8B08b5omJplGr7zimIVx8k9DSOSdbyIBPMxhcxQ" style="width:100%" height="177" onclick="window.open('https://infinite-dusk-75274.herokuapp.com/', '_blank');"
+                    alt="Quiet day at the beach. Cold, but beautiful" title="Friend Finder">
+                <h3>Friend Finder</h3>
+                <p>Find a scary movie friend that closely resembles the type of person you are based on stored information.</p>
+                <img src="https://wallpaperstudio10.com/static/wpdb/wallpapers/1920x1080/182993.jpg"
+                    style="width:100%" height="177" onclick="window.open('https://pdemille.github.io/Train-Scheduler/', '_blank');" alt="The Beach. Me. Alone. Beautiful" title="Train Scheduler">
+                <h3>Train Scheduler</h3>
+                <p>Let's find out when the next train is available using simple logic to track train times.</p>
+            </div>
+
+            <div class="w3-quarter">
+                <img src="https://media.istockphoto.com/videos/falling-hangman-noose-video-id499063884?s=640x640"
+                    style="width:100%" height="177" onclick="window.open('https://pdemille.github.io/Word-Guess-Game/', '_blank');" alt="Canoeing again" title="Word Guess Game">
+                <h3>Word Guess Game</h3>
+                <p>A new way for plant nurseries to share product info directly to a consumer, and to make a profit while doing
+                    so!</p>
+                <img src="https://digitalart.io/storage/artworks/211/Abstract-Digital-Art-Wallpaper.jpeg" 
+                style="width:100%" height="177" onclick="window.open('https://github.com/pdemille/Liri', '_blank');" 
+                    alt="Quiet day at the beach. Cold, but beautiful" title="Liri">
+                <h3>Liri</h3>
+                <p>Similar to Siri, but without Steve Jobs.. and a voice. Nevertheless, run her in the Command Line and watch magic unfold!</p>
+                <img src="https://i.pinimg.com/originals/81/65/2d/81652d35acd57a917538218b41be956a.jpg"
+                    style="width:100%" height="177" onclick="window.open('https://pdemille.github.io/unit-4-game/', '_blank');" alt="The Beach. Me. Alone. Beautiful" title="Crystal Game">
+                <h3>Crystal Game</h3>
+                <p>A basic-coded crystal game with a Breaking Bad twist!</p>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="w3-center w3-padding-32">
+            <div class="w3-bar">
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+                <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+                <!--
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+                -->
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+            </div>
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption">sjdghj</p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h4>
+                <b>About Me</b>
+            </h4>
+            <img src="me.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <h4>Paris DeMille</h4>
+                <p>I am a full stack developer that has exponential experience in Oracle SQL development and datapulling. Anything database related is my specialty, however, I am not constrained to database creating or manipulation. I thoroughly enjoy back end development and the creation of websites in front end development. As you can see in my portfolio page, I'm really interested in everything from creating apps that use databases to store customer information to ecommerce sites that specialize in pushing product out the door.
+                    
+                    Aside from any coding skill sets, I have a Master's Degree in finance
+                </p>
+                <p>mail: parisademille@gmail.com</p>
+                <p>tel: 435 773-7152</p>
+                <hr class="w3-opacity">
+                <h4 class="w3-padding-16">Technical Skills</h4>
+                <p class="w3-wide">Database Optimzation</p>
+                <div class="w3-white">
+                    <div class="w3-container w3-padding-small w3-center w3-grey" style="width:95%">95%</div>
+                </div>
+                <p class="w3-wide">Financial Modeling</p>
+                <div class="w3-white">
+                    <div class="w3-container w3-padding-small w3-center w3-grey" style="width:90%">90%</div>
+                </div>
+                <p class="w3-wide">Product Management - UI/UX</p>
+                <div class="w3-white">
+                    <div class="w3-container w3-padding-small w3-center w3-grey" style="width:90%">90%</div>
+                </div>
+                <p class="w3-wide">Back-End Development</p>
+                <div class="w3-white">
+                    <div class="w3-container w3-padding-small w3-center w3-grey" style="width:85%">85%</div>
+                </div>
+                <p class="w3-wide">Front End Development</p>
+                <div class="w3-white">
+                    <div class="w3-container w3-padding-small w3-center w3-grey" style="width:80%">80%</div>
+                </div>
+
+                <p>
+                    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black">Download Resume</button>
+                </p>
+                <hr class="w3-opacity">
+
+                <!--
+                <h4 class="w3-padding-16">How much I charge</h4>
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half w3-margin-bottom">
+                        <ul class="w3-ul w3-white w3-center">
+                            <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+                            <li class="w3-padding-16">Web Design</li>
+                            <li class="w3-padding-16">Photography</li>
+                            <li class="w3-padding-16">5GB Storage</li>
+                            <li class="w3-padding-16">Mail Support</li>
+                            <li class="w3-padding-16">
+                                <h2>$ 10</h2>
+                                <span class="w3-opacity">per month</span>
+                            </li>
+                            <li class="w3-light-grey w3-padding-24">
+                                <button class="w3-button w3-white w3-padding-large">Sign Up</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="w3-half">
+                        <ul class="w3-ul w3-white w3-center">
+                            <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
+                            <li class="w3-padding-16">Web Design</li>
+                            <li class="w3-padding-16">Photography</li>
+                            <li class="w3-padding-16">50GB Storage</li>
+                            <li class="w3-padding-16">Endless Support</li>
+                            <li class="w3-padding-16">
+                                <h2>$ 25</h2>
+                                <span class="w3-opacity">per month</span>
+                            </li>
+                            <li class="w3-light-grey w3-padding-24">
+                                <button class="w3-button w3-white w3-padding-large">Sign Up</button>
+                            </li>
+                        </ul>
+                    </div>
+                -->
+                </div>
+            </div>
+        </div>
+
+
+        <img src="desert.jpg"
+        style="width:100%"  alt="Paris DeMille's Portfolio" title="Portfolio">
+
+
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content" style="max-width:600px">
+                <h4 class="w3-center">
+                    <b>Contact Me</b>
+                </h4>
+                <p>For freelance work, fill out the form below and let's connect on whatever project you want me to take a look at! </p>
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-section">
+                        <label>Name</label>
+                        <input class="w3-input w3-border" type="text" name="Name" required>
+                    </div>
+                    <div class="w3-section">
+                        <label>Email</label>
+                        <input class="w3-input w3-border" type="text" name="Email" required>
+                    </div>
+                    <div class="w3-section">
+                        <label>Message</label>
+                        <input class="w3-input w3-border" type="text" name="Message" required>
+                    </div>
+                    <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-32 w3-grey">
+            <div class="w3-row-padding">
+                <div class="w3-third">
+                    <h3>INFO</h3>
+                    <p>Full Stack Development projects, Financial Modeling, and UI/UX product management guidance.</p>
+                </div>
+        
+                <div class="w3-third">
+                    
+                    <ul class="w3-ul">
+                        <li class="w3-padding-16 w3-hover-black">
+                            
+                            <i class="fab fa-linkedin-in" style="width:100px"></i>
+                            <i class="fab fa-facebook-f" style="width:100px"></i>
+                            <i class="fab fa-instagram" style="width:100px"></i>
+
+
+
+
+
+                        </li>
+
+                    </ul>
+                </div>
+         
+
+                <div class="w3-third">
+                    <h3>POPULAR TAGS</h3>
+                    <p>
+                        <span class="w3-tag w3-black w3-margin-bottom">Developing</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Coding</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">SQL</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">MongoDB</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">UI</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">UX</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Finance</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Business</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">React</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">jQuery</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Bootstrap</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">JS</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Node</span>
+                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Express</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="w3-black w3-center w3-padding-24">Copyright © Paris DeMille 2018 ||
+            <a href="https://github.com/pdemille" title="W3.CSS" target="_blank" class="w3-hover-opacity">Github - PDEMILLE</a>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>
