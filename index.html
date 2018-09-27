@@ -48,7 +48,7 @@
                     style="width:100%"  alt="Paris DeMille's Portfolio" title="Portfolio">
 
     <!-- Top menu on small screens -->
-    <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+    <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16" >
         <span class="w3-left w3-padding">Paris DeMille's Portfolio</span>
         <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
     </header>
@@ -77,6 +77,13 @@
                     style="width:100%" height="177" onclick="window.open('https://wornock.com/', '_blank');" alt="The Beach. Me. Alone. Beautiful" title="Wornöck">
                 <h3>Wornöck</h3>
                 <p>An ecommerce site that directly works with wholesalers to provide optimal priced women's beach wear!</p>
+           
+                <img src="https://totalcrypto.io/wp-content/uploads/2018/07/Cardano-ADA-needs-more-exchange-listing-for-a-competitive-edge.jpg?x15823"
+                    style="width:100%" height="177" onclick="window.open('https://wornock.com/', '_blank');" alt="The Beach. Me. Alone. Beautiful" title="Wornöck">
+                <h3>Crypto News Scraper</h3>
+                <p>Ever tried to save news articles from cryptocurrency news sites? No? Well now you can!</p>
+           
+           
             </div>
 
             <div class="w3-quarter">
@@ -191,7 +198,7 @@
                 </div>
 
                 <p>
-                    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black">Download Resume</button>
+                    <a target="_blank" href="resume.pdf"><button  class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black">Download Resume</button></a>
                 </p>
                 <hr class="w3-opacity">
 
@@ -248,28 +255,39 @@
                     <b>Contact Me</b>
                 </h4>
                 <p>For freelance work, fill out the form below and let's connect on whatever project you want me to take a look at! </p>
-                <form action="/action_page.php" target="_blank">
+                
+                <form id="fr1" target="_blank" action="https://formspree.io/parisademille@gmail.com" method="POST">
                     <div class="w3-section">
                         <label>Name</label>
-                        <input class="w3-input w3-border" type="text" name="Name" required>
+                        <input id="name" class="w3-input w3-border" type="text" name="name" required>
                     </div>
                     <div class="w3-section">
                         <label>Email</label>
-                        <input class="w3-input w3-border" type="text" name="Email" required>
+                        <input id="email" class="w3-input w3-border"  type="email" name="_replyto" required>
                     </div>
                     <div class="w3-section">
                         <label>Message</label>
-                        <input class="w3-input w3-border" type="text" name="Message" required>
+                        <input  type="text" name="name" id="message" class="w3-input w3-border" required>
                     </div>
-                    <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+                    <button id="mail-link" type="submit" value="Send" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
                 </form>
             </div>
         </div>
+        <!--surge -d parisdemille.surge.sh
+        TO UPDATE and rehost
+    -->
+
+       <!--  <form action="https://formspree.io/parisademille@gmail.com" method="POST">
+      <input type="text" name="name"> 
+      <input type="email" name="_replyto">
+      <input type="submit" value="Send">
+  </form> -->
+
 
         <!-- Footer -->
         <footer class="w3-container w3-padding-32 w3-grey">
             <div class="w3-row-padding">
-                <div class="w3-third">
+                <div class="w3-third" align="center">
                     <h3>INFO</h3>
                     <p>Full Stack Development projects, Financial Modeling, and UI/UX product management guidance.</p>
                 </div>
@@ -277,23 +295,17 @@
                 <div class="w3-third">
                     
                     <ul class="w3-ul">
-                        <li class="w3-padding-16 w3-hover-black">
+                        <li class="w3-padding-16 w3-hover-black" align="center">
                             
-                            <i class="fab fa-linkedin-in" style="width:100px"></i>
-                            <i class="fab fa-facebook-f" style="width:100px"></i>
-                            <i class="fab fa-instagram" style="width:100px"></i>
-
-
-
-
-
+                            <a class="fab fa-linkedin-in" style="width:100px" href="https://www.linkedin.com/in/parisdemille/"></a>
+                            <a class="fab fa-facebook-f" style="width:100px" href="https://www.facebook.com/paris.boronow"></a>
+                            <a class="fab fa-instagram" style="width:100px" href="https://www.instagram.com/paris.armani/"></a>
                         </li>
-
                     </ul>
                 </div>
          
 
-                <div class="w3-third">
+                <div class="w3-third" align="center">
                     <h3>POPULAR TAGS</h3>
                     <p>
                         <span class="w3-tag w3-black w3-margin-bottom">Developing</span>
